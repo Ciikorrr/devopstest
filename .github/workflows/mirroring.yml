@@ -14,4 +14,4 @@ jobs:
           target_repo_url:
             git@github.com:Ciikorrr/devopstest.git
           ssh_private_key:
-            ${{secrets.DEVOPS_CHOCOLATINE_EPITECH}}
+            ${{secrets.DEVOPS_SECRET}}
