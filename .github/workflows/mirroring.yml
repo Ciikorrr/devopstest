@@ -1,0 +1,17 @@
+name: repository_mirroring
+run-name: ${{github.actor}} mirroring repo
+on: [push]
+
+jobs:
+  to_github:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@github.com:Ciikorrr/devopstest.git
+          ssh_private_key:
+            ${{secrets.DEVOPS_CHOCOLATINE_EPITECH}}
